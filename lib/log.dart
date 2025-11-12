@@ -232,7 +232,7 @@ extension LogManagerExtension on LogManager {
         'force': force == true ? "1" : "0",
         'raw': raw ?? "",
         'priority': priority?.rawValue ?? "",
-        'timestamp': DateTime.now().millisecondsSinceEpoch,
+        'timestamp': "${DateTime.now().millisecondsSinceEpoch}",
       };
       _logQueue.add(data);
       _scheduleDispatchIfNeeded();
